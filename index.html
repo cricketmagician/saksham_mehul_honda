@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Saksham Honda Showroom — Chhattisgarh's Premium Dealer</title>
+    <meta name="description"
+        content="Experience the power and elegance of Honda motorcycles at Saksham Honda Showroom. Your trusted motorcycle parts store in Baikunthpur, Chhattisgarh.">
+    <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏍️</text></svg>">
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="#" class="navbar-logo">
+                <img src="images/logo.png" alt="Saksham Honda Logo"
+                    style="height: 40px; width: auto; margin-right: 8px;">
+                <div class="logo-text">
+                    <span class="logo-name">Saksham Honda</span>
+                </div>
+            </a>
+
+            <div class="navbar-links">
+                <a href="#bikes">Bikes</a>
+                <a href="#emi">Finance</a>
+                <a href="#test-ride">Test Ride</a>
+                <a href="#why-us">Why Us</a>
+                <a href="#location">Visit</a>
+            </div>
+
+            <a href="#test-ride" class="navbar-cta">Book Test Ride</a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#bikes">Motorcycles</a>
+        <a href="#emi">EMI Finance</a>
+        <a href="#test-ride">Test Ride</a>
+        <a href="#why-us">Why Choose Us</a>
+        <a href="#location">Showroom</a>
+        <a href="#test-ride" class="mobile-menu-cta">Book Test Ride</a>
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1 class="hero-title reveal">
+                Ride the <span class="accent">Power</span><br>
+                <span class="gradient-text">of Honda.</span>
+            </h1>
+            <p class="hero-description reveal" style="transition-delay: 0.1s;">
+                Welcome to Saksham Honda Showroom. Experience performance, style, and absolute precision.
+                <br><b>Motorcycle parts store in Chhattisgarh.</b>
+            </p>
+            <div class="hero-buttons reveal" style="transition-delay: 0.2s;">
+                <a href="#bikes" class="btn-primary-sc">Experience Setup</a>
+            </div>
+        </div>
+
+        <div class="hero-image-wrapper reveal" style="transition-delay: 0.4s;">
+            <div class="hero-image">
+                <img src="images/hero.png" alt="Honda CB500F Motorcycle" loading="eager">
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURED BIKES ===== -->
+    <section class="featured-bikes" id="bikes">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-label">The Collection</p>
+                <h2 class="section-title">Masterpieces<br>in motion.</h2>
+                <p class="section-subtitle">Discover the perfect balance of power and agility.</p>
+            </div>
+
+            <div class="category-filters reveal" id="bikeFilters">
+                <button class="cat-btn active" data-filter="all">All Models</button>
+                <button class="cat-btn" data-filter="scooter">Scooters</button>
+                <button class="cat-btn" data-filter="110-125">110-125cc</button>
+                <button class="cat-btn" data-filter="160-200">160-200cc</button>
+                <button class="cat-btn" data-filter="250+">250cc+</button>
+            </div>
+
+            <div class="bikes-grid" id="bikesGrid">
+                <!-- Card 1 -->
+                <div class="bike-card reveal" data-bike="cbr" data-cc="250+">
+                    <div class="bike-card-image uniform-direction">
+                        <span class="bike-card-badge">Pro</span>
+                        <img src="images/cbr.png" alt="Honda CBR 250R" loading="lazy">
+                    </div>
+                    <div class="bike-card-body">
+                        <div class="bike-card-top">
+                            <h3 class="bike-card-name">CBR 250R</h3>
+                            <p class="bike-card-category">Sport Racing</p>
+                        </div>
+                        <div class="bike-card-specs">
+                            <div class="bike-card-spec">
+                                <span class="spec-val">249cc</span>
+                                <span class="spec-lbl">Engine</span>
+                            </div>
+                            <div class="bike-card-spec">
+                                <span class="spec-val">35kmpl</span>
+                                <span class="spec-lbl">Mileage</span>
+                            </div>
+                        </div>
+                        <div class="bike-card-footer">
+                            <div class="bike-card-price">₹2,12,000 <small>From</small></div>
+                            <button class="bike-card-btn" aria-label="View details">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    viewBox="0 0 24 24">
+                                    <path d="M5 12h14m-7-7l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bike-card reveal" data-bike="hornet" data-cc="160-200">
+                    <div class="bike-card-image uniform-direction">
+                        <span class="bike-card-badge">New</span>
+                        <img src="images/hornet.png" alt="Honda Hornet 2.0" loading="lazy">
+                    </div>
+                    <div class="bike-card-body">
+                        <div class="bike-card-top">
+                            <h3 class="bike-card-name">Hornet 2.0</h3>
+                            <p class="bike-card-category">Street Fighter</p>
+                        </div>
+                        <div class="bike-card-specs">
+                            <div class="bike-card-spec">
+                                <span class="spec-val">184cc</span>
+                                <span class="spec-lbl">Engine</span>
+                            </div>
+                            <div class="bike-card-spec">
+                                <span class="spec-val">40kmpl</span>
+                                <span class="spec-lbl">Mileage</span>
+                            </div>
+                        </div>
+                        <div class="bike-card-footer">
+                            <div class="bike-card-price">₹1,40,000 <small>From</small></div>
+                            <button class="bike-card-btn" aria-label="View details">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    viewBox="0 0 24 24">
+                                    <path d="M5 12h14m-7-7l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bike-card reveal" data-bike="unicorn" data-cc="160-200">
+                    <div class="bike-card-image uniform-direction">
+
+                        <img src="images/unicorn.png" alt="Honda Unicorn" loading="lazy">
+                    </div>
+                    <div class="bike-card-body">
+                        <div class="bike-card-top">
+                            <h3 class="bike-card-name">Unicorn</h3>
+                            <p class="bike-card-category">Premium Commuter</p>
+                        </div>
+                        <div class="bike-card-specs">
+                            <div class="bike-card-spec">
+                                <span class="spec-val">162cc</span>
+                                <span class="spec-lbl">Engine</span>
+                            </div>
+                            <div class="bike-card-spec">
+                                <span class="spec-val">55kmpl</span>
+                                <span class="spec-lbl">Mileage</span>
+                            </div>
+                        </div>
+                        <div class="bike-card-footer">
+                            <div class="bike-card-price">₹1,10,000 <small>From</small></div>
+                            <button class="bike-card-btn" aria-label="View details">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    viewBox="0 0 24 24">
+                                    <path d="M5 12h14m-7-7l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bike-card reveal" data-bike="shine" data-cc="110-125">
+                    <div class="bike-card-image uniform-direction">
+                        <span class="bike-card-badge">Essential</span>
+                        <img src="images/shine.png" alt="Honda Shine 125" loading="lazy">
+                    </div>
+                    <div class="bike-card-body">
+                        <div class="bike-card-top">
+                            <h3 class="bike-card-name">Shine 125</h3>
+                            <p class="bike-card-category">Everyday Reliability</p>
+                        </div>
+                        <div class="bike-card-specs">
+                            <div class="bike-card-spec">
+                                <span class="spec-val">124cc</span>
+                                <span class="spec-lbl">Engine</span>
+                            </div>
+                            <div class="bike-card-spec">
+                                <span class="spec-val">65kmpl</span>
+                                <span class="spec-lbl">Mileage</span>
+                            </div>
+                        </div>
+                        <div class="bike-card-footer">
+                            <div class="bike-card-price">₹80,000 <small>From</small></div>
+                            <button class="bike-card-btn" aria-label="View details">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    viewBox="0 0 24 24">
+                                    <path d="M5 12h14m-7-7l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bike-card reveal" data-bike="sp125" data-cc="110-125">
+                    <div class="bike-card-image uniform-direction">
+                        <span class="bike-card-badge">Popular</span>
+                        <img src="images/shine.png" alt="Honda SP125" loading="lazy">
+                    </div>
+                    <div class="bike-card-body">
+                        <div class="bike-card-top">
+                            <h3 class="bike-card-name">SP125</h3>
+                            <p class="bike-card-category">Advanced Commuter</p>
+                        </div>
+                        <div class="bike-card-specs">
+                            <div class="bike-card-spec">
+                                <span class="spec-val">124cc</span>
+                                <span class="spec-lbl">Engine</span>
+                            </div>
+                            <div class="bike-card-spec">
+                                <span class="spec-val">60kmpl</span>
+                                <span class="spec-lbl">Mileage</span>
+                            </div>
+                        </div>
+                        <div class="bike-card-footer">
+                            <div class="bike-card-price">₹86,000 <small>From</small></div>
+                            <button class="bike-card-btn" aria-label="View details">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    viewBox="0 0 24 24">
+                                    <path d="M5 12h14m-7-7l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bike-card reveal" data-bike="livo" data-cc="110-125">
+                    <div class="bike-card-image uniform-direction">
+
+                        <img src="images/shine.png" alt="Honda Livo" loading="lazy">
+                    </div>
+                    <div class="bike-card-body">
+                        <div class="bike-card-top">
+                            <h3 class="bike-card-name">Livo</h3>
+                            <p class="bike-card-category">Stylish Commuter</p>
+                        </div>
+                        <div class="bike-card-specs">
+                            <div class="bike-card-spec">
+                                <span class="spec-val">109cc</span>
+                                <span class="spec-lbl">Engine</span>
+                            </div>
+                            <div class="bike-card-spec">
+                                <span class="spec-val">60kmpl</span>
+                                <span class="spec-lbl">Mileage</span>
+                            </div>
+                        </div>
+                        <div class="bike-card-footer">
+                            <div class="bike-card-price">₹78,000 <small>From</small></div>
+                            <button class="bike-card-btn" aria-label="View details">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    viewBox="0 0 24 24">
+                                    <path d="M5 12h14m-7-7l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="bike-card reveal" data-bike="sp160" data-cc="160-200">
+                    <div class="bike-card-image uniform-direction">
+                        <span class="bike-card-badge">Bold</span>
+                        <img src="images/unicorn.png" alt="Honda SP160" loading="lazy">
+                    </div>
+                    <div class="bike-card-body">
+                        <div class="bike-card-top">
+                            <h3 class="bike-card-name">SP160</h3>
+                            <p class="bike-card-category">Premium Commuter</p>
+                        </div>
+                        <div class="bike-card-specs">
+                            <div class="bike-card-spec">
+                                <span class="spec-val">162cc</span>
+                                <span class="spec-lbl">Engine</span>
+                            </div>
+                            <div class="bike-card-spec">
+                                <span class="spec-val">45kmpl</span>
+                                <span class="spec-lbl">Mileage</span>
+                            </div>
+                        </div>
+                        <div class="bike-card-footer">
+                            <div class="bike-card-price">₹1,18,000 <small>From</small></div>
+                            <button class="bike-card-btn" aria-label="View details">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    viewBox="0 0 24 24">
+                                    <path d="M5 12h14m-7-7l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="bike-card reveal" data-bike="nx200" data-cc="160-200">
+                    <div class="bike-card-image uniform-direction">
+                        <span class="bike-card-badge">Explore</span>
+                        <img src="images/hornet.png" alt="Honda NX200" loading="lazy">
+                    </div>
+                    <div class="bike-card-body">
+                        <div class="bike-card-top">
+                            <h3 class="bike-card-name">NX200</h3>
+                            <p class="bike-card-category">Adventure</p>
+                        </div>
+                        <div class="bike-card-specs">
+                            <div class="bike-card-spec">
+                                <span class="spec-val">184cc</span>
+                                <span class="spec-lbl">Engine</span>
+                            </div>
+                            <div class="bike-card-spec">
+                                <span class="spec-val">40kmpl</span>
+                                <span class="spec-lbl">Mileage</span>
+                            </div>
+                        </div>
+                        <div class="bike-card-footer">
+                            <div class="bike-card-price">₹1,48,000 <small>From</small></div>
+                            <button class="bike-card-btn" aria-label="View details">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    viewBox="0 0 24 24">
+                                    <path d="M5 12h14m-7-7l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 9 -->
+                <div class="bike-card reveal" data-bike="cb125" data-cc="110-125">
+                    <div class="bike-card-image uniform-direction">
+
+                        <img src="images/hornet.png" alt="Honda CB125 Hornet" loading="lazy">
+                    </div>
+                    <div class="bike-card-body">
+                        <div class="bike-card-top">
+                            <h3 class="bike-card-name">CB125 Hornet</h3>
+                            <p class="bike-card-category">Street Naked</p>
+                        </div>
+                        <div class="bike-card-specs">
+                            <div class="bike-card-spec">
+                                <span class="spec-val">124.9cc</span>
+                                <span class="spec-lbl">Engine</span>
+                            </div>
+                            <div class="bike-card-spec">
+                                <span class="spec-val">50kmpl</span>
+                                <span class="spec-lbl">Mileage</span>
+                            </div>
+                        </div>
+                        <div class="bike-card-footer">
+                            <div class="bike-card-price">₹95,000 <small>From</small></div>
+                            <button class="bike-card-btn" aria-label="View details">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    viewBox="0 0 24 24">
+                                    <path d="M5 12h14m-7-7l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 10 -->
+                <div class="bike-card reveal" data-bike="activa" data-cc="scooter">
+                    <div class="bike-card-image uniform-direction">
+                        <span class="bike-card-badge">No. 1</span>
+                        <img src="images/activa.png" alt="Honda Activa 6G" loading="lazy">
+                    </div>
+                    <div class="bike-card-body">
+                        <div class="bike-card-top">
+                            <h3 class="bike-card-name">Activa 6G</h3>
+                            <p class="bike-card-category">Iconic Scooter</p>
+                        </div>
+                        <div class="bike-card-specs">
+                            <div class="bike-card-spec">
+                                <span class="spec-val">110cc</span>
+                                <span class="spec-lbl">Engine</span>
+                            </div>
+                            <div class="bike-card-spec">
+                                <span class="spec-val">60kmpl</span>
+                                <span class="spec-lbl">Mileage</span>
+                            </div>
+                        </div>
+                        <div class="bike-card-footer">
+                            <div class="bike-card-price">₹75,000 <small>From</small></div>
+                            <button class="bike-card-btn" aria-label="View details">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    viewBox="0 0 24 24">
+                                    <path d="M5 12h14m-7-7l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 11 -->
+                <div class="bike-card reveal" data-bike="dio" data-cc="scooter">
+                    <div class="bike-card-image uniform-direction">
+                        <span class="bike-card-badge">Fun</span>
+                        <img src="images/activa.png" alt="Honda Dio" loading="lazy">
+                    </div>
+                    <div class="bike-card-body">
+                        <div class="bike-card-top">
+                            <h3 class="bike-card-name">Dio</h3>
+                            <p class="bike-card-category">Moto Scooter</p>
+                        </div>
+                        <div class="bike-card-specs">
+                            <div class="bike-card-spec">
+                                <span class="spec-val">110cc</span>
+                                <span class="spec-lbl">Engine</span>
+                            </div>
+                            <div class="bike-card-spec">
+                                <span class="spec-val">55kmpl</span>
+                                <span class="spec-lbl">Mileage</span>
+                            </div>
+                        </div>
+                        <div class="bike-card-footer">
+                            <div class="bike-card-price">₹70,000 <small>From</small></div>
+                            <button class="bike-card-btn" aria-label="View details">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    viewBox="0 0 24 24">
+                                    <path d="M5 12h14m-7-7l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 12 -->
+                <div class="bike-card reveal" data-bike="dio125" data-cc="scooter">
+                    <div class="bike-card-image uniform-direction">
+
+                        <img src="images/activa.png" alt="Honda Dio 125" loading="lazy">
+                    </div>
+                    <div class="bike-card-body">
+                        <div class="bike-card-top">
+                            <h3 class="bike-card-name">Dio 125</h3>
+                            <p class="bike-card-category">Sporty Scooter</p>
+                        </div>
+                        <div class="bike-card-specs">
+                            <div class="bike-card-spec">
+                                <span class="spec-val">124cc</span>
+                                <span class="spec-lbl">Engine</span>
+                            </div>
+                            <div class="bike-card-spec">
+                                <span class="spec-val">50kmpl</span>
+                                <span class="spec-lbl">Mileage</span>
+                            </div>
+                        </div>
+                        <div class="bike-card-footer">
+                            <div class="bike-card-price">₹83,000 <small>From</small></div>
+                            <button class="bike-card-btn" aria-label="View details">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    viewBox="0 0 24 24">
+                                    <path d="M5 12h14m-7-7l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 13 -->
+                <div class="bike-card reveal" data-bike="activa125" data-cc="scooter">
+                    <div class="bike-card-image uniform-direction">
+                        <span class="bike-card-badge">Smart</span>
+                        <img src="images/activa.png" alt="Honda Activa 125" loading="lazy">
+                    </div>
+                    <div class="bike-card-body">
+                        <div class="bike-card-top">
+                            <h3 class="bike-card-name">Activa 125</h3>
+                            <p class="bike-card-category">Premium Scooter</p>
+                        </div>
+                        <div class="bike-card-specs">
+                            <div class="bike-card-spec">
+                                <span class="spec-val">124cc</span>
+                                <span class="spec-lbl">Engine</span>
+                            </div>
+                            <div class="bike-card-spec">
+                                <span class="spec-val">50kmpl</span>
+                                <span class="spec-lbl">Mileage</span>
+                            </div>
+                        </div>
+                        <div class="bike-card-footer">
+                            <div class="bike-card-price">₹82,000 <small>From</small></div>
+                            <button class="bike-card-btn" aria-label="View details">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    viewBox="0 0 24 24">
+                                    <path d="M5 12h14m-7-7l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BIKE DETAIL MODAL ===== -->
+    <div class="bike-detail-overlay" id="bikeDetailOverlay"></div>
+    <div class="bike-detail" id="bikeDetail">
+        <div class="detail-header">
+            <div style="width:40px"></div>
+            <button class="detail-close-btn" id="detailCloseBtn">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="detail-gallery">
+            <div class="detail-gallery-track" id="galleryTrack"></div>
+        </div>
+        <div class="gallery-dots" id="galleryDots"></div>
+
+        <div class="detail-info" id="detailInfo"></div>
+    </div>
+
+    <!-- ===== EMI CALCULATOR ===== -->
+    <section class="emi-section" id="emi">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-label">Finance</p>
+                <h2 class="section-title">Design your payment.</h2>
+                <p class="section-subtitle">Absolute clarity on what you pay, instantly.</p>
+            </div>
+
+            <div class="emi-card reveal">
+                <div style="text-align:center;">
+                    <p
+                        style="color:rgba(255,255,255,0.6); font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.75rem;">
+                        Monthly Estimate</p>
+                    <div class="emi-result-value" id="emiResult">₹5,500</div>
+                    <p class="emi-result-note">Based on 9.5% p.a. interest rate</p>
+                </div>
+
+                <div class="emi-slider-group">
+                    <div class="emi-slider-header">
+                        <span class="emi-slider-label">Vehicle Price</span>
+                        <span class="emi-slider-value" id="priceValue">₹1,50,000</span>
+                    </div>
+                    <input type="range" class="emi-slider" id="priceSlider" min="50000" max="600000" value="150000"
+                        step="10000">
+                </div>
+
+                <div class="emi-slider-group">
+                    <div class="emi-slider-header">
+                        <span class="emi-slider-label">Down Payment</span>
+                        <span class="emi-slider-value" id="downValue">₹30,000</span>
+                    </div>
+                    <input type="range" class="emi-slider" id="downSlider" min="0" max="300000" value="30000"
+                        step="5000">
+                </div>
+
+                <div class="emi-slider-group">
+                    <div class="emi-slider-header">
+                        <span class="emi-slider-label">Tenure</span>
+                        <span class="emi-slider-value" id="tenureValue">24 months</span>
+                    </div>
+                    <input type="range" class="emi-slider" id="tenureSlider" min="6" max="60" value="24" step="6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GOOGLE REVIEWS ===== -->
+    <section class="reviews-section" id="reviews">
+        <div class="container reveal">
+            <div class="reviews-card">
+                <div class="reviews-content">
+                    <div class="google-badge">
+                        <img src="images/logo.png" alt="Saksham Honda Logo"
+                            style="height: 32px; width: auto; margin-right: 12px; border-radius: 4px;">
+                        <span>Google Business Profile</span>
+                    </div>
+                    <div class="rating-box">
+                        <span class="rating-value">4.5</span>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                    <h3 class="reviews-count">15 Google reviews</h3>
+                    <p class="reviews-tagline">"Most trusted motorcycle store in Churcha, Baikunthpur."</p>
+                    <a href="https://www.google.com/search?q=Saksham+Honda+Showroom" target="_blank" class="loc-btn"
+                        style="background:var(--white); color:var(--black); margin-top:16px;">Read all reviews</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TEST RIDE ===== -->
+    <section class="test-ride-section" id="test-ride">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-label">Experience</p>
+                <h2 class="section-title">Feel the thrill.</h2>
+                <p class="section-subtitle">Book your exclusive test ride at Saksham Mehul Honda today.</p>
+            </div>
+
+            <form class="test-ride-form reveal" id="testRideForm">
+                <input class="form-input" type="text" id="trName" placeholder="Full Name" required>
+                <input class="form-input" type="tel" id="trPhone" placeholder="Mobile Number" required
+                    pattern="[0-9]{10}">
+
+                <div class="form-row">
+                    <select class="form-input" id="trBike" required style="margin-bottom:0">
+                        <option value="" disabled selected>Select Model</option>
+                        <option value="cbr">CBR 250R</option>
+                        <option value="hornet">Hornet 2.0</option>
+                        <option value="unicorn">Unicorn</option>
+                        <option value="shine">Shine 125</option>
+                        <option value="sp125">SP125</option>
+                        <option value="livo">Livo</option>
+                        <option value="sp160">SP160</option>
+                        <option value="nx200">NX200</option>
+                        <option value="cb125">CB125 Hornet</option>
+                        <option value="activa">Activa 6G</option>
+                        <option value="dio">Dio</option>
+                        <option value="dio125">Dio 125</option>
+                        <option value="activa125">Activa 125</option>
+                    </select>
+                    <input class="form-input" type="date" id="trDate" required style="margin-bottom:0">
+                </div>
+                <br>
+                <button class="form-submit" type="submit">Confirm Booking</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ===== WHY CHOOSE US ===== -->
+    <section class="why-section" id="why-us">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Uncompromising Quality.</h2>
+            </div>
+
+            <div class="why-grid">
+                <div class="why-card reveal">
+                    <div class="why-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="5" width="20" height="14" rx="2" />
+                            <line x1="2" y1="10" x2="22" y2="10" />
+                        </svg>
+                    </div>
+                    <h3 class="why-card-title">Instant Approval</h3>
+                    <p class="why-card-desc">Zero friction finance options structured entirely around you.</p>
+                </div>
+                <div class="why-card reveal" style="transition-delay: 0.1s;">
+                    <div class="why-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                    </div>
+                    <h3 class="why-card-title">Pro Service</h3>
+                    <p class="why-card-desc">Engineered to factory specifications by master technicians.</p>
+                </div>
+                <div class="why-card reveal" style="transition-delay: 0.2s;">
+                    <div class="why-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                    </div>
+                    <h3 class="why-card-title">Priority Delivery</h3>
+                    <p class="why-card-desc">Your motorcycle, prepared and delivered with absolute precision.</p>
+                </div>
+                <div class="why-card reveal" style="transition-delay: 0.3s;">
+                    <div class="why-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg>
+                    </div>
+                    <h3 class="why-card-title">Premium Heritage</h3>
+                    <p class="why-card-desc">Decades of redefining the motorcycle buying experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== LOCATION ===== -->
+    <section class="location-section" id="location">
+        <div class="container reveal">
+            <div class="location-card">
+                <div class="location-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.4!2d72.8!3d19.1!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA2JzAwLjAiTiA3MsKwNDgnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                        allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="location-info">
+                    <h3 class="location-name">Saksham Honda Showroom</h3>
+                    <p
+                        style="color:var(--mid-grey); font-weight:500; font-size:1.0625rem; line-height:1.6; margin-bottom: 24px;">
+                        main road, NH 43, near police station<br>
+                        Churcha, Baikunthpur, Chhattisgarh 497339<br><br>
+                        <span style="font-size: 0.875rem;">Mon–Sat · 9:30 AM – 9:00 PM</span>
+                    </p>
+                    <div class="location-buttons">
+                        <a href="tel:+917354205099" class="loc-btn primary">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                <path
+                                    d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                            </svg>
+                            Call Showroom
+                        </a>
+                        <a href="https://wa.me/917354205099" target="_blank" class="loc-btn whatsapp">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                <path
+                                    d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.284l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.768-5.764-5.768zm3.393 8.167c-.145.415-.719.782-1.189.897-.47.114-1.112.196-1.594-.078-.363-.205-.824-.442-1.31-.692-.516-.266-.998-.514-1.428-.847-.43-.333-.79-.696-1.036-1.161-.247-.464-.325-.97-.101-1.396.224-.424.71-.62.912-.811.202-.191.269-.328.404-.546.135-.219.068-.41-.034-.602-.101-.192-.818-1.928-.963-2.274-.145-.346-.291-.328-.403-.328-.112 0-.246 0-.379.022-.133.022-.358.066-.546.262-.188.197-.717.701-.717 1.708 0 1.007.724 1.98.825 2.112.101.131 1.41 2.133 3.42 2.992.48.205.856.328 1.144.42.481.153.918.131 1.263.078.384-.058 1.189-.485 1.357-.954.168-.469.168-.863.118-.946-.05-.083-.182-.132-.384-.233z" />
+                            </svg>
+                            WhatsApp
+                        </a>
+                        <a href="https://maps.google.com" target="_blank" class="loc-btn minimal">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+                                <line x1="8" y1="2" x2="8" y2="18"></line>
+                                <line x1="16" y1="6" x2="16" y2="22"></line>
+                            </svg>
+                            Directions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="logo-mark footer-logo-mark">SH</div>
+            <h4 class="footer-name">Saksham Honda Showroom</h4>
+            <div class="footer-links">
+                <a href="#bikes">Collection</a>
+                <a href="#emi">Finance Setup</a>
+                <a href="#test-ride">Experience</a>
+                <a href="#why-us">Heritage</a>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 Saksham Mehul Honda. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
