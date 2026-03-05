@@ -18,14 +18,6 @@ const pool = new Pool({
 app.use(cors());
 app.use(express.json());
 
-// Serve static files from the parent directory (root)
-app.use(express.static(path.join(__dirname, '..')));
-
-// Root route to serve index.html
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'index.html'));
-});
-
 // Initialize Database Table
 const initDb = async () => {
     try {

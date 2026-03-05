@@ -17,12 +17,12 @@ const pool = new Pool({
 
 app.use(cors());
 app.use(express.json());
-// Serve static files from the root directory
-app.use(express.static(__dirname));
+// Serve static files from the public directory
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Health check / Root route
+// Root route
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // Initialize Database Table
