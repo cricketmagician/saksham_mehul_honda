@@ -1,6 +1,7 @@
 const express = require('express');
 const { Pool } = require('pg');
 const cors = require('cors');
+const path = require('path');
 require('dotenv').config();
 
 const app = express();
@@ -16,6 +17,13 @@ const pool = new Pool({
 
 app.use(cors());
 app.use(express.json());
+// Serve static files from the root directory
+app.use(express.static(__dirname));
+
+// Health check / Root route
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
 
 // Initialize Database Table
 const initDb = async () => {
