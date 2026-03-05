@@ -261,52 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* =========================================
-     8.  TEST RIDE FORM (WORKING BACKEND)
-     ========================================= */
-  const trForm = document.getElementById('trForm');
-  if (trForm) {
-    trForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
-
-      const submitBtn = trForm.querySelector('button[type="submit"]');
-      const originalText = submitBtn.innerText;
-
-      submitBtn.innerText = 'Confirming...';
-      submitBtn.disabled = true;
-
-      const formData = {
-        name: document.getElementById('trName').value,
-        phone: document.getElementById('trPhone').value,
-        bike: document.getElementById('trBike').value,
-        date: document.getElementById('trDate').value
-      };
-
-      try {
-        const response = await fetch('http://localhost:3000/api/bookings', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(formData)
-        });
-
-        if (response.ok) {
-          alert('Experience Confirmed! Our team will contact you shortly.');
-          trForm.reset();
-        } else {
-          const error = await response.json();
-          alert(`Error: ${error.error || 'Something went wrong'}`);
-        }
-      } catch (err) {
-        console.error('Submission error:', err);
-        alert('Could not connect to the server. Please try again later.');
-      } finally {
-        submitBtn.innerText = originalText;
-        submitBtn.disabled = false;
-      }
-    });
-  }
+  // Placeholder removed - consolidated below
 
   /* =========================================
      3.  GLASSMORPHIC NAVBAR LOGIC
@@ -545,26 +500,65 @@ document.addEventListener('DOMContentLoaded', () => {
   syncSliders();
 
   /* =========================================
-     7.  TEST RIDE FORM (Premium Feedback)
+     7.  TEST RIDE FORM (Premium Feedback & Backend)
      ========================================= */
   const testRideForm = document.getElementById('testRideForm');
-  const dateInput = document.getElementById('trDate');
-  dateInput.setAttribute('min', new Date().toISOString().split('T')[0]);
+  if (testRideForm) {
+    const dateInput = document.getElementById('trDate');
+    if (dateInput) dateInput.setAttribute('min', new Date().toISOString().split('T')[0]);
 
-  testRideForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    if (!/^[0-9]{10}$/.test(document.getElementById('trPhone').value)) {
-      alert('Please enter a valid 10-digit phone number.');
-      return;
-    }
-    const btn = testRideForm.querySelector('.form-submit');
-    btn.textContent = 'Booking Confirmed ✓';
-    btn.style.background = '#34C759'; // Apple Green
-    setTimeout(() => {
-      testRideForm.reset();
-      btn.textContent = 'Confirm Booking';
-      btn.style.background = 'var(--black)';
-    }, 4000);
-  });
+    testRideForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const phone = document.getElementById('trPhone').value;
+      if (!/^[0-9]{10}$/.test(phone)) {
+        alert('Please enter a valid 10-digit phone number.');
+        return;
+      }
+
+      const btn = testRideForm.querySelector('.form-submit');
+      const originalText = btn.textContent;
+
+      btn.textContent = 'Confirming...';
+      btn.disabled = true;
+
+      const formData = {
+        name: document.getElementById('trName').value,
+        phone: phone,
+        bike: document.getElementById('trBike').value,
+        date: document.getElementById('trDate').value
+      };
+
+      try {
+        // Use relative path for Vercel deployment
+        const response = await fetch('/api/bookings', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData)
+        });
+
+        if (response.ok) {
+          btn.textContent = 'Booking Confirmed ✓';
+          btn.style.background = '#34C759'; // Apple Green
+          testRideForm.reset();
+          setTimeout(() => {
+            btn.textContent = originalText;
+            btn.style.background = 'var(--black)';
+            btn.disabled = false;
+          }, 4000);
+        } else {
+          const error = await response.json();
+          alert(`Error: ${error.error || 'Something went wrong'}`);
+          btn.textContent = originalText;
+          btn.disabled = false;
+        }
+      } catch (err) {
+        console.error('Submission error:', err);
+        alert('Could not connect to the server. Please try again later.');
+        btn.textContent = originalText;
+        btn.disabled = false;
+      }
+    });
+  }
 
 });
